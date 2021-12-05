@@ -374,7 +374,7 @@ func main() {
                             if testnet == true {
                                 address = keys.Hash160ToAddress(script, []byte{0x6f}) // (m/n)address - testnet addresses have a special prefix
                             } else {
-                                address = keys.Hash160ToAddress(script, []byte{0x00}) // 1address
+                                address = keys.Hash160ToAddress(script, []byte{0x48}) // 1address
                             }
                         }
                         scriptType = "p2pkh"
@@ -387,7 +387,7 @@ func main() {
                             if testnet == true {
                                 address = keys.Hash160ToAddress(script, []byte{0xc4}) // 2address - testnet addresses have a special prefix
                             } else {
-                                address = keys.Hash160ToAddress(script, []byte{0x05}) // 3address
+                                address = keys.Hash160ToAddress(script, []byte{0x63}) // 3address
                             }
                         }
                         scriptType = "p2sh"
@@ -423,7 +423,7 @@ func main() {
                                 if testnet == true {
                                     address = keys.PublicKeyToAddress(script, []byte{0x6f}) // (m/n)address - testnet addresses have a special prefix
                                 } else {
-                                    address = keys.PublicKeyToAddress(script, []byte{0x00}) // 1address
+                                    address = keys.PublicKeyToAddress(script, []byte{0x48}) // 1address
                                 }
                             }
                         }
